@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="user/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<section>
+		<div class="container">
+
+			<div class="card">
+				<div class="card-body">
+					<div class="container text-center">
+						<img alt="profile image" style="height: 200px; width: 200px;"
+							src="" class="my_profile_picture"
+							th:src="@{'/image/'+${user.imageUrl}}">
+					</div>
+
+					<h2 class="text-center" th:text="${user.name}"></h2>
+
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">User ID</th>
+								<th scope="col">SCM2021<span th:text="${user.id}"></span></th>
+								<!-- <th scope="col">Last Name</th>
+								<th scope="col">Profession</th>
+								<th scope="col">Email</th>
+								<th scope="col">Phone</th>
+								<th scope="col">Descripton</th> -->
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">Email</th>
+								<td><span th:text="${user.email}"></span></td>
+								<!-- <td th:text="${contact.firstName}"></td>
+								<td th:text="${contact.lastName}"></td>
+								<td th:text="${contact.profession}"></td>
+								<td th:text="${contact.email}"></td>
+								<td th:text="${contact.phone}"></td>
+								<td th:text="${contact.descripton}"></td> -->
+
+							</tr>
+
+							<tr>
+
+								<th scope="row">Role</th>
+								<td><span th:text="${user.role}"></span></td>
+
+							</tr>
+
+							<!-- <tr>
+
+								<th scope="row">Phone</th>
+								<td><span th:text="${contact.phone}"></span></td>
+
+							</tr> -->
+
+							<tr>
+
+								<th scope="row">About</th>
+								<td><span th:text="${user.about}"></span></td>
+
+							</tr>
+
+						</tbody>
+					</table>
+
+
+
+
+
+
+
+
+
+
+				</div>
+
+
+			</div>
+
+
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+	</section>
+</body>
+</html>
